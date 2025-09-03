@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from myapp.models import Register
+from django.contrib import messages
 ## The App Items will Show When you will connect it to the templates bcs we are 
 ## using files of HTML Sos connect the templates folder  
 def index(req):
@@ -19,4 +20,5 @@ def register(req):
         password = req.POST.get("password")
         register = Register(name = name, email = email, phone=phone, password=password)
         register.save()
+        messages.success(request=req, message='Registered successfully!')
     return render(req,"register.html")

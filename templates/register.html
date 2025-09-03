@@ -6,6 +6,11 @@
     <title>Register</title>
 </head>
 <body>
+    {% if messages %}
+    {% for message in messages %}
+    <p style="color : green;">{{ message }}</p>
+    {% endfor %}
+    {% endif %}
     <form method="post" action="/register">
         {% csrf_token %}
         <input type="text" name="name" placeholder="Enter your name">
