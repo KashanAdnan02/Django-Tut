@@ -1,0 +1,1 @@
+https://small-cirrus-404.notion.site/Django-Start-Setup-2627287cf0a580d4919bd632a32fe4e5
